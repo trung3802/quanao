@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<title>Shop Quần Áo Thành Trung</title>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+			
+	</head>
+	<body>
+		<div id="header">		
+			<div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
+				<img id="logo" src="Logo.png" alt="Logo" />
+				
+				<select id="cate-option">
+					<option value="Thời Trang Nam">Thời Trang Nam</option>
+					<option value="Thời Trang Nữ">Thời Trang Nữ</option>		
+					<option value="Phụ Kiện Thời Trang">Phụ Kiện Thời Trang</option>							
+				</select>
+				
+				<input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
+				
+				<input id="btnsearch" type="button" value="Tìm" />
+				
+								
+				<div id="account">
+					<a href="#"><b>Tài khoản</b></a> <br />
+					<a href="#">Đăng nhập</a> & <a href="#">Đăng ký</a>
+				</div>
+				
+				<div id="cart">
+					<a href="cart.html" > <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a> 
+					<a href="cart.html">Giỏ hàng</a>				
+				</div>	
+				
+				<!-- Tạo menu ngang 2 cấp -->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">Trang chủ</a></li>
+						<li><a href="GioiThieu.html">Giới thiệu</a></li>
+						<li><a href="SanPham.html">Sản phẩm</a>
+							<ul>
+								<li><a href="#">Áo Nam</a></li>
+								<li><a href="#">Áo Nữ</a></li>
+								<li><a href="#">Quần Nam</a></li>
+								<li><a href="#">Quần Nữ</a></li>								
+							</ul>
+						</li>
+						<li><a href="TinTuc.html">Tin Tức</a></li>
+						<li><a href="KhuyenMai.html">Khuyến mại</a></li>
+						<li><a href="GiaSoc.html">Giá sốc</a></li>
+						<li><a href="LienHe.html">Liên hệ</a></li>
+					</ul>					
+				</div>
+				
+			</div>		
+		</div>
+		
+		<div style="clear: both" ></div>
+		
+		<div id="container" >
+			<div class="col-7 col-s-12 tt1">
+				<h4>THÔNG TIN THANH TOÁN</h4>
+				<hr>
+				<table>
+					<tr>
+						<td>Họ và tên <span id="ht" style="color: red;">*</span> </td>
+						<td><input id="hoten" type="text" placeholder="Điền Họ & Tên"></td>      
+					</tr>
+					<tr>
+						<td>Số điện thoại<span id="dt" style="color: red;">* </span></td>
+						<td><input id="sdt" type="text" placeholder="Điền Số điện thoại"></td>      
+					</tr>
+					<tr>
+						<td>Tỉnh/Thành phố<span id="tp"  style="color: red;">*</span></td>
+						<td><input id="thanhpho" type="text" placeholder="Tỉnh/Thành phố"></td>
+						
+					</tr>
+					<tr>
+						<td>Quận/Huyện<span id="qh" style="color: red;">* </span></td>
+						<td><input id="quanhuyen" type="text" placeholder="Quận/Huyện"></td>      
+					</tr>
+					<tr>
+						<td>Phường/Xã<span id="px" style="color: red;">* </span></td>
+						<td><input id="phuongxa" type="text" placeholder="Phường/Xã"></td>      
+					</tr>
+					<tr>
+						<td>Địa chỉ cụ thể<span id="dc" style="color: red;">* </span></td>
+						<td><input id="diachi" type="text" placeholder="Số nhà, tên tòa nhà, tên đường, tên khu vực"></td>      
+					</tr>
+					<tr>
+						<td><button type="submit" class="submit">Xác Nhận</button></td>   
+					</tr>
+					
+				</table>
+			</div>	
+			<div class="col-5 col-s-12">
+					<h4>TIẾN HÀNH THANH TOÁN</h4>
+					<hr>
+					<div id="delivery-method">
+						<h5>Chọn phương thức giao hàng</h5>
+						<input id="d1" type="radio" value="d1" name="delivery" checked><label for="d1">Giao hàng tiêu chuẩn</label><br>
+						<input id="d2" type="radio" value="d2" name="delivery"><label for="d2">Giao hàng nhanh</label><br>
+						<input id="d3" type="radio" value="d3" name="delivery"><label for="d3">Giao hàng tiết kiệm</label><br>
+						<input id="d4" type="radio" value="d4" name="delivery"><label for="d4">Giao hàng hỏa tốc</label><br>
+					</div>
+					<div id="payment-method">
+						<h5>Chọn phương thức thanh toán</h5>
+						<input id="p1" type="radio" value="p1" name="payment" checked><label for="p1">Thanh toán bằng thẻ nội địa</label><br>
+						<input id="p2" type="radio" value="p2" name="payment"><label for="p2">Thanh toán bằng thẻ visa</label><br>
+						<input id="p2" type="radio" value="p3" name="payment"><label for="p3">Thanh toán bằng thẻ điện tử MoMo</label><br>
+						<input id="p4" type="radio" value="p4" name="payment"><label for="p4">Thanh toán trực tiếp</label><br>
+					</div>
+					<div id="process">
+						<input type="button" value="Thanh toán">
+					</div>
+				</div>
+		</div>	
+   
+		
+		<div style="clear: both" ></div>
+		
+		<div id="footer">				
+				
+			<div  id="tren">
+				<div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">				
+					<div class="info">
+						<span><b>VỀ CHÚNG TÔI</b></span> <br />
+						<ul style="list-style: none" >
+							<li><a href="#">Địa Chỉ: 12 Nguyễn Chế Ngĩa-Gia Lộc </a></li>
+							<li><a href="#">Điện Thoại: 0936846270	</a></li>
+							<li><a href="#">Fax: 343 52 7253</a></li>
+							<li><a href="#">Email: support@gmail.com</a></li>
+							<li><a href="#">Hotline: 19008090</a></li>
+							
+						</ul>						
+					</div>
+					<div class="info">
+						<span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
+						<ul style="list-style: none" >
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Sản Phẩm</a></li>
+							<li><a href="#">Giới Thiệu</a></li>
+							<li><a href="#">Tin Tức</a></li>
+							<li><a href="#">Khuyễn Mãi</a></li>
+							<li><a href="#">Liên Hệ</a></li>
+							<li><a href="#">Chính Sách</a></li>							
+						</ul>						
+					</div>
+					<div class="info">
+						<span><b>Hướng Dẫn Mua Hàng</b></span> <br />
+						<ul style="list-style: none" >
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Sản Phẩm</a></li>
+							<li><a href="#">Giới Thiệu</a></li>
+							<li><a href="#">Tin Tức</a></li>
+							<li><a href="#">Khuyễn Mãi</a></li>
+							<li><a href="#">Liên Hệ</a></li>
+							<li><a href="#">Chính Sách</a></li>	
+						</ul>						
+					</div>
+					<div class="info">
+						<span><b>Thông Tin Chính Sách</b></span> <br />
+						<ul style="list-style: none" >
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Sản Phẩm</a></li>
+							<li><a href="#">Giới Thiệu</a></li>
+							<li><a href="#">Tin Tức</a></li>
+							<li><a href="#">Khuyễn Mãi</a></li>
+							<li><a href="#">Liên Hệ</a></li>
+							<li><a href="#">Chính Sách</a></li>	
+						</ul>						
+					</div>
+				
+			</div>	
+			<div id="duoi">
+				<div id="copyright">
+					<span>@ Bản quyền thuộc về Shop Thành Trung</span>				
+				</div>
+			</div>		
+		</div>
+		
+		
+	</body>
+</html>

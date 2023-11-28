@@ -1,0 +1,470 @@
+
+
+function LogQuanTri() {
+    localStorage.setItem('userquantri', null);
+    window.location.href = "admin.html";
+}
+/QUẢN TRỊ NV/
+function resertForm(){
+    document.getElementById('fullnameNV').value= ''
+    document.getElementById('phoneNV').value= ''
+    document.getElementById('addressNV').value= ''
+    document.getElementById('caNV').value= ''
+    document.getElementById('cvNV').value= ''
+    document.getElementById('sogioNV').value= ''
+    document.getElementById('tienNV').value= ''
+
+    if(document.getElementById('femaleNV').checked){
+        document.getElementById('femaleNV').checked = false
+    }
+    if(document.getElementById('maleNV').checked){
+        document.getElementById('maleNV').checked = false
+    }
+}
+
+function saveNV(){
+
+    let genderNV = document.querySelector('input[name = genderNV]:checked')
+    ? document.querySelector('input[name = genderNV]:checked').value: ''
+    let fullnameNV = document.getElementById('fullnameNV').value
+    let phoneNV = document.getElementById('phoneNV').value
+    let addressNV = document.getElementById('addressNV').value
+    let caNV = document.getElementById('caNV').value
+    let cvNV = document.getElementById('cvNV').value
+    let sogioNV = document.getElementById('sogioNV').value
+    let tienNV = document.getElementById('tienNV').value
+    
+    if(!fullnameNV){
+        document.getElementById('fullnameNV-error').innerText='Vui lòng nhập họ và tên'
+    }
+    else{
+        document.getElementById('fullnameNV-error').innerText = ''
+    }
+
+    if(!phoneNV){
+        document.getElementById('phoneNV-error').innerText='Vui lòng nhập số điện thoại'
+    }
+    else{
+        document.getElementById('phoneNV-error').innerText = ''
+    }
+
+    if(!addressNV){
+        document.getElementById('addressNV-error').innerText='Vui lòng nhập địa chỉ'
+    }
+    else{
+        document.getElementById('addressNV-error').innerText = ''
+    }
+
+    if(!caNV){
+        document.getElementById('caNV-error').innerText='Vui lòng nhập ca làm việc'
+    }
+    else{
+        document.getElementById('caNV-error').innerText = ''
+    }
+
+    if(!cvNV){
+        document.getElementById('cvNV-error').innerText='Vui lòng nhập công việc'
+    }
+    else{
+        document.getElementById('cvNV-error').innerText = ''
+    }
+
+    if(!sogioNV){
+        document.getElementById('sogioNV-error').innerText='Vui lòng nhập số giờ làm việc'
+    }
+    else{
+        document.getElementById('sogioNV-error').innerText = ''
+    }
+
+    if(!tienNV){
+        document.getElementById('tienNV-error').innerText='Vui lòng nhập tiền mỗi giờ'
+    }
+    else{
+        document.getElementById('tienNV-error').innerText = ''
+    }
+
+    if(!genderNV){
+        document.getElementById('genderNV-error').innerText='Vui lòng nhập giới tính'
+    }
+    else{
+        document.getElementById('genderNV-error').innerText = ''
+    }
+
+
+    if(fullnameNV && phoneNV && addressNV && caNV && cvNV && sogioNV && tienNV && genderNV){
+        let listNV = localStorage.getItem('nhanvien')
+            ?JSON.parse(localStorage.getItem('nhanvien')):[]
+        listNV.push({
+            fullnameNV:fullnameNV,
+            phoneNV:phoneNV,
+            addressNV:addressNV,
+            caNV:caNV,
+            cvNV:cvNV,
+            sogioNV:sogioNV,
+            tienNV:tienNV,
+            genderNV:genderNV
+        })
+        localStorage.setItem('nhanvien', JSON.stringify(listNV))
+    }
+    renderNV()
+    resertForm()
+}
+
+function renderNV(){
+    let listNV = localStorage.getItem('nhanvien')
+        ?JSON.parse(localStorage.getItem('nhanvien')):[]
+    let NV = 
+    `
+    <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Giới tính</th>
+        <th>Số điện thoại</th>
+        <th>Địa chỉ</th>
+        <th>Ca làm việc</th>
+        <th>Công việc</th>
+        <th>Số giờ làm việc</th>
+        <th>Tiền mỗi giờ</th>
+        <th>Lương</th>
+        <th>Hành động</th>
+    </tr>
+    `
+    listNV.forEach((value,index)=>{
+        NV +=  `
+                    <tr>
+                        <td>${index}</td>
+                        <td>${value.fullnameNV}</td>
+                        <td>${value.genderNV}</td>
+                        <td>${value.phoneNV}</td>
+                        <td>${value.addressNV}</td>
+                        <td>${value.caNV}</td>
+                        <td>${value.cvNV}</td>
+                        <td>${value.sogioNV}</td>
+                        <td>${value.tienNV}</td>
+                        <td>${value.sogioNV*value.tienNV}</td>
+                        <td>
+                            <a onclick='editNV(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-edit"></span></a>|<a onclick='deleteNV(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    `
+    })
+    document.getElementById('tableNV').innerHTML = NV
+}
+
+function editNV(index){
+    let listNV = localStorage.getItem('nhanvien')
+        ?JSON.parse(localStorage.getItem('nhanvien')):[]
+    document.getElementById('fullnameNV').value = listNV[index].fullnameNV
+    document.getElementById('phoneNV').value = listNV[index].phoneNV
+    document.getElementById('addressNV').value = listNV[index].addressNV
+    document.getElementById('caNV').value = listNV[index].caNV
+    document.getElementById('cvNV').value = listNV[index].cvNV
+    document.getElementById('sogioNV').value = listNV[index].sogioNV
+    document.getElementById('tienNV').value = listNV[index].tienNV
+
+    if(document.getElementById('maleNV').value === listNV[index].genderNV){
+        document.getElementById('maleNV').checked = true
+    }
+    if(document.getElementById('femaleNV').value === listNV[index].genderNV){
+        document.getElementById('femaleNV').checked = true
+    }
+
+    document.getElementById('index').value = index
+
+    document.getElementById('savenv').style.display = 'none'
+    document.getElementById('updatenv').style.display = 'inline-block'
+
+}
+
+function changeNV(){
+    let listNV = localStorage.getItem('nhanvien')
+        ?JSON.parse(localStorage.getItem('nhanvien')):[]
+    
+        let keynumber = document.getElementById('index').value
+
+        listNV[keynumber] = {
+            fullnameNV: document.getElementById('fullnameNV').value,
+            phoneNV: document.getElementById('phoneNV').value,
+            addressNV: document.getElementById('addressNV').value,
+            caNV: document.getElementById('caNV').value,
+            cvNV: document.getElementById('cvNV').value,
+            sogioNV: document.getElementById('sogioNV').value,
+            tienNV: document.getElementById('tienNV').value,
+            genderNV: document.querySelector('input[name=genderNV]:checked').value
+        }
+
+        localStorage.setItem('nhanvien',JSON.stringify(listNV))
+
+        document.getElementById('savenv').style.display = 'inline-block'
+        document.getElementById('updatenv').style.display = 'none'
+
+        resertForm()
+        renderNV()
+}
+
+function deleteNV(nhanvien){
+    let listNV = localStorage.getItem('nhanvien')
+        ?JSON.parse(localStorage.getItem('nhanvien')):[]
+    listNV.splice(nhanvien,1)
+    localStorage.setItem('nhanvien',JSON.stringify(listNV))
+    renderNV()
+    resertForm()
+}
+
+/QUẢN TRỊ KH/
+function resertFormKH(){
+    document.getElementById('fullnameKH').value= ''
+    document.getElementById('phoneKH').value= ''
+    document.getElementById('addressKH').value= ''
+
+    if(document.getElementById('femaleKH').checked){
+        document.getElementById('femaleKH').checked = false
+    }
+    if(document.getElementById('maleKH').checked){
+        document.getElementById('maleKH').checked = false
+    }
+}
+
+function saveKH(){
+
+    let genderKH = document.querySelector('input[name = genderKH]:checked')
+    ? document.querySelector('input[name = genderKH]:checked').value: ''
+    let fullnameKH = document.getElementById('fullnameKH').value
+    let phoneKH = document.getElementById('phoneKH').value
+    let addressKH = document.getElementById('addressKH').value
+    
+    if(!fullnameKH){
+        document.getElementById('fullnameKH-error').innerText='Vui lòng nhập họ và tên'
+    }
+    else{
+        document.getElementById('fullnameKH-error').innerText = ''
+    }
+
+    if(!phoneKH){
+        document.getElementById('phoneKH-error').innerText='Vui lòng nhập số điện thoại'
+    }
+    else{
+        document.getElementById('phoneKH-error').innerText = ''
+    }
+
+    if(!addressKH){
+        document.getElementById('addressKH-error').innerText='Vui lòng nhập địa chỉ'
+    }
+    else{
+        document.getElementById('addressKH-error').innerText = ''
+    }
+
+    if(!genderKH){
+        document.getElementById('genderKH-error').innerText='Vui lòng nhập giới tính'
+    }
+    else{
+        document.getElementById('genderKH-error').innerText = ''
+    }
+
+
+    if(fullnameKH && phoneKH && addressKH && genderKH){
+        let listKH = localStorage.getItem('khachhang')
+            ?JSON.parse(localStorage.getItem('khachhang')):[]
+        listKH.push({
+            fullnameKH:fullnameKH,
+            phoneKH:phoneKH,
+            addressKH:addressKH,
+            genderKH:genderKH
+        })
+        localStorage.setItem('khachhang', JSON.stringify(listKH))
+    }
+    renderKH()
+    resertFormKH()
+}
+
+function renderKH(){
+    let listKH = localStorage.getItem('khachhang')
+        ?JSON.parse(localStorage.getItem('khachhang')):[]
+    let KH = 
+    `
+    <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>GiớI tính</th>
+        <th>Số điện thoại</th>
+        <th>Địa chỉ</th>
+        <th>Hành động</th>
+    </tr>
+    `
+    listKH.forEach((value,index)=>{
+        KH +=  `
+                    <tr>
+                        <td>${index}</td>
+                        <td>${value.fullnameKH}</td>
+                        <td>${value.genderKH}</td>
+                        <td>${value.phoneKH}</td>
+                        <td>${value.addressKH}</td>
+                        <td>
+                            <a onclick='editKH(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-edit"></span></a>|<a onclick='deleteKH(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    `
+    })
+    document.getElementById('tableKH').innerHTML = KH
+}
+
+function editKH(index){
+    let listKH = localStorage.getItem('khachhang')
+        ?JSON.parse(localStorage.getItem('khachhang')):[]
+    document.getElementById('fullnameKH').value = listKH[index].fullnameKH
+    document.getElementById('phoneKH').value = listKH[index].phoneKH
+    document.getElementById('addressKH').value = listKH[index].addressKH
+
+    if(document.getElementById('maleKH').value === listKH[index].genderKH){
+        document.getElementById('maleKH').checked = true
+    }
+    if(document.getElementById('femaleKH').value === listKH[index].genderKH){
+        document.getElementById('femaleKH').checked = true
+    }
+
+    document.getElementById('index').value = index
+
+    document.getElementById('savekh').style.display = 'none'
+    document.getElementById('updatekh').style.display = 'inline-block'
+
+}
+
+function changeKH(){
+    let listKH = localStorage.getItem('khachhang')
+        ?JSON.parse(localStorage.getItem('khachhang')):[]
+    
+        let keynumber = document.getElementById('index').value
+
+        listKH[keynumber] = {
+            fullnameKH: document.getElementById('fullnameKH').value,
+            phoneKH: document.getElementById('phoneKH').value,
+            addressKH: document.getElementById('addressKH').value,
+            genderKH: document.querySelector('input[name=genderKH]:checked').value
+        }
+
+        localStorage.setItem('khachhang',JSON.stringify(listKH))
+
+        document.getElementById('savekh').style.display = 'inline-block'
+        document.getElementById('updatekh').style.display = 'none'
+
+        resertFormKH()
+        renderKH()
+}
+
+function deleteKH(khachhang){
+    let listKH = localStorage.getItem('khachhang')
+        ?JSON.parse(localStorage.getItem('khachhang')):[]
+    listKH.splice(khachhang,1)
+    localStorage.setItem('khachhang',JSON.stringify(listKH))
+    renderKH()
+    resertFormKH()
+}
+
+
+
+/QUẢN TRỊ TT/
+function resertFormTT(){
+    document.getElementById('ngdang').value= ''
+    document.getElementById('nd').value= ''
+}
+
+function saveTT(){
+
+    let ngdang = document.getElementById('ngdang').value
+    let nd = document.getElementById('nd').value
+    
+    if(!ngdang){
+        document.getElementById('ngdang-error').innerText='Vui lòng nhập người đăng'
+    }
+    else{
+        document.getElementById('ngdang-error').innerText = ''
+    }
+
+    if(!nd){
+        document.getElementById('nd-error').innerText='Vui lòng nhập nội dung'
+    }
+    else{
+        document.getElementById('nd-error').innerText = ''
+    }
+
+    if(ngdang && nd){
+        let listTT = localStorage.getItem('tintuc')
+            ?JSON.parse(localStorage.getItem('tintuc')):[]
+        listTT.push({
+            ngdang:ngdang,
+            nd:nd
+        })
+        localStorage.setItem('tintuc', JSON.stringify(listTT))
+    }
+    renderTT()
+    resertFormTT()
+}
+
+function renderTT(){
+    let listTT = localStorage.getItem('tintuc')
+        ?JSON.parse(localStorage.getItem('tintuc')):[]
+    let TT = 
+    `
+    <tr>
+        <th>#ID</th>
+        <th>Người đăng</th>
+        <th style="width: 500px;">Nội dung</th>
+        <th>Hành động</th>
+    </tr>
+    `
+    listTT.forEach((value,index)=>{
+        TT +=  `
+                    <tr>
+                        <td>${index}</td>
+                        <td>${value.ngdang}</td>
+                        <td>${value.nd}</td>
+                        <td>
+                            <a onclick='editTT(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-edit"></span></a>|<a onclick='deleteTT(${index})' href="#"><span style="margin: 5px;" class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    `
+    })
+    document.getElementById('tableTT').innerHTML = TT
+}
+
+function editTT(index){
+    let listTT = localStorage.getItem('tintuc')
+        ?JSON.parse(localStorage.getItem('tintuc')):[]
+    document.getElementById('ngdang').value = listTT[index].ngdang
+    document.getElementById('nd').value = listTT[index].nd
+    
+    document.getElementById('index').value = index
+
+    document.getElementById('savett').style.display = 'none'
+    document.getElementById('updatett').style.display = 'inline-block'
+
+}
+
+function changeTT(){
+    let listTT = localStorage.getItem('tintuc')
+        ?JSON.parse(localStorage.getItem('tintuc')):[]
+    
+        let keynumber = document.getElementById('index').value
+
+        listTT[keynumber] = {
+            ngdang: document.getElementById('ngdang').value,
+            nd: document.getElementById('nd').value,
+        }
+
+        localStorage.setItem('tintuc',JSON.stringify(listTT))
+
+        document.getElementById('savett').style.display = 'inline-block'
+        document.getElementById('updatett').style.display = 'none'
+
+        resertFormTT()
+        renderTT()
+}
+
+function deleteTT(tintuc){
+    let listTT = localStorage.getItem('tintuc')
+        ?JSON.parse(localStorage.getItem('tintuc')):[]
+    listTT.splice(tintuc,1)
+    localStorage.setItem('tintuc',JSON.stringify(listTT))
+    renderTT()
+    resertFormTT()
+}

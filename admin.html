@@ -1,0 +1,76 @@
+<html >
+		<head>
+			<meta charset="UTF-8">      
+			<title>Tài Khoản</title>  
+			<!-- link js -->   
+			<script src="jquery-3.6.0.min.js"></script>
+			<style type="text/css">
+						.dangnhap {
+							font-size:30px;
+						}
+						#taikhoan{
+						height:40px;
+						width:240px;
+						font-size:25px;
+						}
+						#matkhau{
+						height:40px;
+						width:240px;
+						font-size:25px;
+						}
+			</style>
+		</head>
+		<body style="background-color:  rgb(247, 197, 197);">
+		<center style="font-size: 25px;" >
+			<form id="target" action="">
+				<table class="dangnhap">
+					<tr>
+						<td colspan="2" style="text-align: center">
+							<h1>Truy Cập ADMIN</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>Tài khoản:</td>
+						<td>
+							<input id="taikhoan" type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>Mật khẩu:</td>
+						<td>
+							<input id="matkhau" type="password">
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td >
+							<button style="width:120px; height: 40px;margin-top:20px;"type="submit">ĐĂNG NHẬP</button>
+						</td>
+					</tr>
+				</table>
+				<label id="err" style="color: red;font-weight: lighter;margin-top: 0px;"></label>
+			</form>
+			<br>
+			<p><b>Truy Cập Người Dùng --> </b><a style="color: chocolate;" href="index.html">Truy Cập Tại Đây</a></p>
+		</center>
+
+
+		<script>
+			$('#err').html('');
+			$("#target").submit(function (event) {
+				var _taikhoan = $('#taikhoan').val();
+				var _matkhau = $('#matkhau').val();
+				if (_taikhoan == 'admin' && _matkhau == '123456') {
+					var user = { taikhoan: _taikhoan, matkhau: _matkhau };
+					localStorage.setItem('user', JSON.stringify(user));
+					window.location.href = "QLSP.html";
+				} else {
+					$('#err').html('Thông tin tài khoản hoặc mật khẩu không đúng');
+				}
+				event.preventDefault();
+			});
+		</script>
+
+
+		</body>
+</html>

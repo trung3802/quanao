@@ -1,0 +1,140 @@
+/* ========NHÂN VIÊN=========== */
+
+.nhanvien td{
+ padding-bottom: 15px;
+}
+.nhanvien span{
+  font-size: 20px;
+  
+}
+.tong{
+  width: 1250px;
+  height: 600px;       
+}
+.qtleft{
+  
+  width: 250px;
+  /* height: 600px; */
+  float: left;
+  margin-top: -7px;
+  margin-left: -7px;
+  border-radius: 1%;
+}
+
+.qtleft h2{
+  
+  font-weight: bold;
+  
+  text-align: center;
+}
+.qtleft ul{
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.qtleft li{
+  list-style: none;
+  
+  margin-top: 10px;
+  line-height: 40px;
+}
+.qtleft li:hover{
+  
+  width: 150px;
+  text-align: center;
+  border-radius: 3%;
+  text-decoration: none;
+}
+.qtleft a:hover{
+  text-decoration: none;
+}
+.qtleft button{
+  
+  padding: 5px;
+  border: 2px solid rgb(243, 57, 43);
+  border-radius: 7%;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+.qtright{
+
+width: 1015px;
+/* height: 600px; */
+float: right;
+margin-top: -7px;
+margin-right: -20px;
+border-radius: 1%;
+}
+.hang1{
+
+width: 1015px;
+height: 100px;
+margin-top: -20px;
+border: 1px solid wheat;
+}
+.hang1 h1{
+text-align: center;
+padding-top: 20px;
+
+}
+
+
+div.form-student{
+  width:600px;
+  border: 4px solid rgb(238, 100, 100);
+  margin-left: 210px;
+  margin-top: 20px;
+  padding: 10px;
+  float: left;
+}
+div.list-student{
+  width: 800px;
+  /* border: 1px solid black; */
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 10px;
+  float: left;
+}
+div.form-student h3, div.list-student h3{
+  padding: 0px;
+  margin-top: 0px;
+}
+div.list-student h3{
+  color: red;
+  font-weight: bolder;
+}
+div.form-student label{
+  width: 150px;
+  float: left;
+}
+div.form-student input[type="text"], button{
+  margin-bottom: 10px;
+  width: 200px;
+  /* padding: 5px; */
+}
+div.form-student input[type="number"]{
+  margin-bottom: 10px;
+  width: 200px;
+  /* padding: 5px; */
+}
+div.form-student button{
+  margin-top: 15px;
+}
+/* #grid-students td{
+  width: 500px;
+} */
+.error{
+  color:red;
+}
+
+
+#tableNV,#tableKH,#tablePH,#tableTT{
+  /* width:900px;  */
+  width: 100%;
+  
+  margin-bottom: 20px;
+}
+#tableNV th,#tableKH th,#tablePH th,#tableTT th{
+  
+  text-align: center;
+}

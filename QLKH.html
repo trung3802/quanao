@@ -1,0 +1,91 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Quản lý khách hàng</title>
+    <!-- link lên kết css -->
+    <link rel="stylesheet" href="main_nv.css">
+    <!-- link biểu tượng update/xóa -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- link js -->
+    <script src="silde.js"></script>
+    <script src="scrip1.js"></script>
+</head>
+
+<body onload="renderNV()">
+    <input id="index" type="hidden">
+    
+    <div class="tong">
+
+        <div class="qtleft" style="height: 620px;">
+            <i><h2>Danh Mục</h2></i>
+            <ul>
+                <a href="QLSP.html"><li><span class="glyphicon glyphicon-th"></span>Quản lý sản phẩm</li></a>
+                <a href="#"><li><span class="glyphicon glyphicon-shopping-cart"></span>Quản lý đơn hàng</li></a>
+                <a href="QLPH.html"><li><span class="glyphicon glyphicon-envelope"></span>Quản lý phản hồi</li></a>
+                <a href="QLTT.html"><li><span class="glyphicon glyphicon-list-alt"></span>Quản lý tin tức</li></a>
+                <a href="QLNV.html"><li><span class="glyphicon glyphicon-education"></span>Quản lý nhân viên</li></a> 
+                <a href="QLKH.html"> <li><span class="glyphicon glyphicon-lock"></span>Quản lý khách hàng</li></a>
+                <a href="#"><li><span class="glyphicon glyphicon-book"></span>Báo cáo thống kê</li></a>
+            </ul>
+            <a href="javascript:LogQuanTri();"><button><span class="glyphicon glyphicon-log-out"></span>Đăng xuất</button></a>
+        </div>
+
+
+
+        <div class="qtright">
+
+            <div class="hang1">
+                <h1>TRANG QUẢN TRỊ</h1>
+
+                <div class="form-student">
+                    <h3 class="ChuChay"><marquee direction="right">Thông tin khách hàng VIP</marquee></h3>
+                    <label >Họ và tên</label>
+                    <input id="fullnameKH" type="text">
+                    <span id="fullnameKH-error" class="error"></span>
+                    <br>
+            
+                    <label >Số điện thoại</label>
+                    <input id="phoneKH" type="text">
+                    <span id="phoneKH-error" class="error"></span>
+                    <br>
+            
+                    <label >Địa chỉ</label>
+                    <input id="addressKH" type="text">
+                    <span id="addressKH-error" class="error"></span>
+                    <br>
+            
+                    <label >Giới tính</label>
+                    <input id="femaleKH" name="genderKH" type="radio" value="Nam">Nam
+                    <input id="maleKH" name="genderKH" type="radio" value="Nữ">Nữ
+                    <span id="genderKH-error" class="error"></span>
+                    <br>
+                    <br>
+            
+                    <label >&nbsp;</label>
+                    <button id="savekh" onclick="saveKH()">Lưu</button>
+                    <button id="updatekh" onclick="changeKH()" style="display: none;">Cập nhật</button>
+                </div>
+                    
+                <div class="list-student">
+                    <h3>Danh sách khách hàng</h3>
+                    <table id="tableKH" width= "900px" ; border= "3" ; cellpadding="0" cellpadding="0">
+                        <tr>
+                            <th>#</th>
+                            <th style="padding: 5px;">Họ và tên</th>
+                            <th>Giới tính</th>
+                            <th>Điện thoại</th>
+                            <th>Địa chỉ</th>
+                            <th>Hành động</th>
+                        </tr>    
+                    </table>
+                </div>
+
+            
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

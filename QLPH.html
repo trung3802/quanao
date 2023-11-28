@@ -1,0 +1,57 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Quản lý khách hàng</title>
+    <!-- link lên kết css -->
+    <link rel="stylesheet" href="main_nv.css">
+    <!-- link biểu tượng update/xóa -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- link js -->
+    <script src="silde.js"></script>
+    <script src="scrip1.js"></script>
+</head>
+
+<body onload="renderNV()">
+    <input id="index" type="hidden">
+    
+    <div class="tong">
+
+        <div class="qtleft" style="height: 620px;">
+            <i><h2>Danh Mục</h2></i>
+            <ul>
+                <a href="QLSP.html"><li><span class="glyphicon glyphicon-th"></span>Quản lý sản phẩm</li></a>
+                <a href="#"><li><span class="glyphicon glyphicon-shopping-cart"></span>Quản lý đơn hàng</li></a>
+                <a href="QLPH.html"><li><span class="glyphicon glyphicon-envelope"></span>Quản lý phản hồi</li></a>
+                <a href="QLTT.html"><li><span class="glyphicon glyphicon-list-alt"></span>Quản lý tin tức</li></a>
+                <a href="QLNV.html"><li><span class="glyphicon glyphicon-education"></span>Quản lý nhân viên</li></a> 
+                <a href="QLKH.html"> <li><span class="glyphicon glyphicon-lock"></span>Quản lý khách hàng</li></a>
+                <a href="#"><li><span class="glyphicon glyphicon-book"></span>Báo cáo thống kê</li></a>
+            </ul>
+            <a href="javascript:LogQuanTri();"><button><span class="glyphicon glyphicon-log-out"></span>Đăng xuất</button></a>
+        </div>
+
+        <div class="qtright">
+
+            <div class="hang1">
+                <h1>TRANG QUẢN TRỊ</h1>
+                <div class="list-student">
+                    <h3>Danh sách phản hồi</h3>
+                    <table id="tablePH" width= "600px" border= "1" cellpadding="0" cellpadding="0">
+                        <!-- <tr>
+                            <th>#ID</th>
+                            <th>Nickname</th>
+                            <th>Phản hồi</th>
+                            <th>Hành động</th>
+                        </tr> -->
+                    </table>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
