@@ -1,0 +1,85 @@
+#container {
+    display: flex;
+}
+
+.right-chitiet,
+.left-chitiet {
+    flex: 1;
+    padding: 10px;
+    /* Tùy chọn: Thêm padding nếu cần */
+    box-sizing: border-box;
+    /* Tùy chọn: Để padding không làm thay đổi chiều rộng */
+}
+
+.right-chitiet {
+    max-width: 700px;
+}
+
+.right-chitiet {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Cải thiện định dạng chung cho left-chitiet */
+
+.left-chitiet {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    /* Thêm border để tạo đường viền */
+    border-radius: 10px;
+    /* Bo tròn các góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Thêm shadow */
+}
+
+
+/* Thiết lập định dạng cho các phần tử con bên trong left-chitiet */
+
+.left-chitiet h2 {
+    color: #333;
+    /* Màu chữ */
+}
+
+.left-chitiet a b {
+    color: #e44d26;
+    /* Màu chữ in đậm */
+}
+
+.left-chitiet h3 {
+    margin-top: 15px;
+    /* Tạo khoảng cách giữa các tiêu đề */
+    color: #555;
+    /* Màu chữ nhạt hơn */
+}
+
+#sizeDropdown,
+#quantityInput {
+    width: 100%;
+    margin-top: 5px;
+    /* Tạo khoảng cách giữa dropdown và input */
+    padding: 8px;
+    /* Tăng kích thước padding để làm cho các thành phần dễ nhìn hơn */
+}
+
+
+/* Tạo một nút mua hàng hấp dẫn */
+
+.buy-button {
+    display: inline-block;
+    background-color: #e44d26;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.buy-button:hover {
+    background-color: #333;
+}

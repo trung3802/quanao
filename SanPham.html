@@ -1,399 +1,463 @@
 <html>
-	<head>
-		<title>Shop Quần Áo</title>
-		<link rel="stylesheet" type="text/css" href="main.css" />
-	</head>
-	<body>
-		<div id="header">		
-			<div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
-				<img id="logo" src="Logo.png" alt="Logo" />
-				
-				<select id="cate-option">
+
+<head>
+    <title>Shop Quần Áo</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
+            <img id="logo" src="Logo.png" alt="Logo" />
+
+            <select id="cate-option">
 					<option value="Thời Trang Nam">Thời Trang Nam</option>
 					<option value="Thời Trang Nữ">Thời Trang Nữ</option>		
 					<option value="Phụ Kiện Thời Trang">Phụ Kiện Thời Trang</option>							
 				</select>
-				
-				<input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
-				
-				<input id="btnsearch" type="button" value="Tìm" />
-				
-								
-				<div id="account">
-					<a href="#"><b>Tài khoản</b></a> <br />
-					<a href="#">Đăng nhập</a> & <a href="#">Đăng ký</a>
-				</div>
-				
-				<div id="cart">
-					<a href="cart.html" > <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a> 
-					<a href="cart.html">Giỏ hàng</a>				
-				</div>	
-				
-				<!-- Tạo menu ngang 2 cấp -->
-				<div id="nav">
-					<ul>
-						<li><a href="index.html">Trang chủ</a></li>
-						<li><a href="GioiThieu.html">Giới thiệu</a></li>
-						<li><a href="SanPham.html">Sản phẩm</a>
-							<ul>
-								<li><a href="aonam.html">Áo Nam</a></li>
-								<li><a href="aonu.html">Áo Nữ</a></li>
-								<li><a href="quannam.html">Quần Nam</a></li>
-								<li><a href="quannu.html">Quần Nữ</a></li>								
-							</ul>
-						</li>
-						<li><a href="TinTuc.html">Tin Tức</a></li>
-						<li><a href="KhuyenMai.html">Khuyến mại</a></li>
-						<li><a href="GiaSoc.html">Giá sốc</a></li>
-						<li><a href="LienHe.html">Liên hệ</a></li>
-					</ul>					
-				</div>
-				
-			</div>		
-		</div>
-		
-		<div style="clear: both" ></div>
-		
-		<div id="container" style="">		
-			<div class="row">
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>ÁO POLO xanh</h4>
-						<center>
-							<img src="picture/an1.jpg"><br>
-							<span>Giá bán:560.000đ</span>
-						</center> 
-						</div>                     
-					</div>
-				<div class="col-2 col-s-6 sptop">                   
-					<div class="sp">
-						<h4>Áo Nam Đen Polo</h4>
-						<center>
-							<img src="picture/an2.jpg"><br>
-							<span>Giá bán:400.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Áo Trắng Nam</h4>
-						<center>
-							<img src="picture/an3.jpg"><br>                       
-							<span>Giá bán:500.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Áo Cộc Tay Nam</h4>        
-						<center>
-							<img src="picture/an4.jpg"><br>                       
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Combo 2 áo nam</h4>
-						<center>
-							<img src="picture/an5.jpg"><br>
-							<span>Giá bán:440.000đ</span>
-							
-						</center> 
-						</div>                     
-					</div>
-				<div class="col-2 col-s-6 sptop">                   
-					<div class="sp">
-						<h4>Áo 2 lớp</h4>
-						<center>
-							<img src="picture/ao1.jpg"><br>
-							<span>Giá bán:560.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Váy áo</h4>
-						<center>
-							<img src="picture/ao2.jpg"><br>                       
-							<span>Giá bán:400.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Áo Sơ Mi</h4>        
-						<center>
-							<img src="picture/ao3.jpg"><br>                       
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Áo Cộc Tay</h4>
-						<center>
-							<img src="picture/ao4.jpg"><br>
-							<span>Giá bán:242.000đ</span>
-							
-						</center> 
-						</div>                     
-					</div>
-				<div class="col-2 col-s-6 sptop">                   
-					<div class="sp">
-						<h4>Áo Đen Cá Tính</h4>
-						<center>
-							<img src="picture/ao5.jpg"><br>
-							<span>Giá bán:440.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Dài Nam Xám</h4>
-						<center>
-							<img src="picture/dn1.jpg"><br>                       
-							<span>Giá bán:560.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Nam Đen</h4>        
-						<center>
-							<img src="picture/dn2.jpg"><br>                       
-							<span>Giá bán:400.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Ống Xuông</h4>
-						<center>
-							<img src="picture/dn3.jpg"><br>
-							<span>Giá bán:500.000đ</span>
-							
-						</center> 
-						</div>                     
-					</div>
-				<div class="col-2 col-s-6 sptop">                   
-					<div class="sp">
-						<h4>Quần Bò Nam</h4>
-						<center>
-							<img src="picture/dn4.jpg"><br>
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Vải Nam</h4>
-						<center>
-							<img src="picture/dn5.jpg"><br>                       
-							<span>Giá bán:440.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Vải Bó</h4>        
-						<center>
-							<img src="picture/quan1.jpg"><br>                       
-							<span>Giá bán:560.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Ống Xuông</h4>        
-						<center>
-							<img src="picture/quan2.jpg"><br>                       
-							<span>Giá bán:400.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Thể Thao</h4>        
-						<center>
-							<img src="picture/quan3.jpg"><br>                       
-							<span>Giá bán:500.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Trắng Xuông</h4>        
-						<center>
-							<img src="picture/quan4.jpg"><br>                       
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Bò Nữ</h4>        
-						<center>
-							<img src="picture/quan5.jpg"><br>                       
-							<span>Giá bán:440.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">                   
-					<div class="sp">
-						<h4>Quần Bò Nam</h4>
-						<center>
-							<img src="picture/dn4.jpg"><br>
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Vải Nam</h4>
-						<center>
-							<img src="picture/dn5.jpg"><br>                       
-							<span>Giá bán:440.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Vải Bó</h4>        
-						<center>
-							<img src="picture/quan1.jpg"><br>                       
-							<span>Giá bán:560.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Ống Xuông</h4>        
-						<center>
-							<img src="picture/quan2.jpg"><br>                       
-							<span>Giá bán:400.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Thể Thao</h4>        
-						<center>
-							<img src="picture/quan3.jpg"><br>                       
-							<span>Giá bán:500.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Trắng Xuông</h4>        
-						<center>
-							<img src="picture/quan4.jpg"><br>                       
-							<span>Giá bán:242.000đ</span>
-							
-						</center>
-					</div>
-				</div>
-				<div class="col-2 col-s-6 sptop">
-					<div class="sp">
-						<h4>Quần Bò Nữ</h4>        
-						<center>
-							<img src="picture/quan5.jpg"><br>                       
-							<span>Giá bán:440.000đ</span>
-							
-						</center>
-					</div>
-				</div>	
-				
-				
-			</div>
-		
-		</div>
-			
-		
-		<div style="clear: both" ></div>
-		
-		<div id="footer">				
-				
-			<div  id="tren">
-				<div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">				
-					<div class="info">
-						<span><b>VỀ CHÚNG TÔI</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Địa Chỉ:  </a></li>
-							<li><a href="#">Điện Thoại: 	</a></li>
-							<li><a href="#">Fax: 343 52 7253</a></li>
-							<li><a href="#">Email: support@gmail.com</a></li>
-							<li><a href="#">Hotline: 19008090</a></li>
-							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Hướng Dẫn Mua Hàng</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Thông Tin Chính Sách</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-				
-			</div>	
-			<div id="duoi">
-				<div id="copyright">
-					<span>@ Bản quyền thuộc về Shop</span>				
-				</div>
-			</div>		
-		</div>
-		
-		
-	</body>
+
+            <input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
+
+            <input id="btnsearch" type="button" value="Tìm" />
+
+
+            <div id="account">
+                <a href="#"><b>Tài khoản</b></a> <br />
+                <a href="#">Đăng nhập</a> & <a href="#">Đăng ký</a>
+            </div>
+
+            <div id="cart">
+                <a href="cart.html"> <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a>
+                <a href="cart.html">Giỏ hàng</a>
+            </div>
+
+            <!-- Tạo menu ngang 2 cấp -->
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                    <li><a href="SanPham.html">Sản phẩm</a>
+                        <ul>
+                            <li><a href="aonam.html">Áo Nam</a></li>
+                            <li><a href="aonu.html">Áo Nữ</a></li>
+                            <li><a href="quannam.html">Quần Nam</a></li>
+                            <li><a href="quannu.html">Quần Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="TinTuc.html">Tin Tức</a></li>
+                    <li><a href="KhuyenMai.html">Khuyến mại</a></li>
+                    <li><a href="GiaSoc.html">Giá sốc</a></li>
+                    <li><a href="LienHe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div id="container" style="">
+        <div id="scrollToTopBtn" onclick="scrollToTop()">
+            <img src="image/top.png">
+        </div>
+        <div class="row">
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>ÁO POLO xanh</h4>
+                    <center>
+                        <img src="picture/an1.jpg"><br>
+                        <span style="    display: flex;
+							flex-direction: column;
+							padding-top: 15px;">Giá bán:560.000đ</span>
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Nam Đen Polo</h4>
+                    <center>
+                        <img src="picture/an2.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:400.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Trắng Nam</h4>
+                    <center>
+                        <img src="picture/an3.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:500.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Cộc Tay Nam</h4>
+                    <center>
+                        <img src="picture/an4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Combo 2 áo nam</h4>
+                    <center>
+                        <img src="picture/an5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo 2 lớp</h4>
+                    <center>
+                        <img src="picture/ao1.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:560.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Váy áo</h4>
+                    <center>
+                        <img src="picture/ao2.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:400.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Sơ Mi</h4>
+                    <center>
+                        <img src="picture/ao3.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Cộc Tay</h4>
+                    <center>
+                        <img src="picture/ao4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Áo Đen Cá Tính</h4>
+                    <center>
+                        <img src="picture/ao5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Dài Nam Xám</h4>
+                    <center>
+                        <img src="picture/dn1.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:560.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Nam Đen</h4>
+                    <center>
+                        <img src="picture/dn2.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:400.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Ống Xuông</h4>
+                    <center>
+                        <img src="picture/dn3.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:500.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Bò Nam</h4>
+                    <center>
+                        <img src="picture/dn4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Vải Nam</h4>
+                    <center>
+                        <img src="picture/dn5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Vải Bó</h4>
+                    <center>
+                        <img src="picture/quan1.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:560.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Ống Xuông</h4>
+                    <center>
+                        <img src="picture/quan2.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:400.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Thể Thao</h4>
+                    <center>
+                        <img src="picture/quan3.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:500.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Trắng Xuông</h4>
+                    <center>
+                        <img src="picture/quan4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Bò Nữ</h4>
+                    <center>
+                        <img src="picture/quan5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Bò Nam</h4>
+                    <center>
+                        <img src="picture/dn4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Vải Nam</h4>
+                    <center>
+                        <img src="picture/dn5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Vải Bó</h4>
+                    <center>
+                        <img src="picture/quan1.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:560.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Ống Xuông</h4>
+                    <center>
+                        <img src="picture/quan2.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:400.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Thể Thao</h4>
+                    <center>
+                        <img src="picture/quan3.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:500.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Trắng Xuông</h4>
+                    <center>
+                        <img src="picture/quan4.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:242.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+            <div class="col-2 col-s-6 sptop">
+                <div class="sp">
+                    <h4>Quần Bò Nữ</h4>
+                    <center>
+                        <img src="picture/quan5.jpg"><br>
+                        <span style="    display: flex;
+						flex-direction: column;
+						padding-top: 15px;">Giá bán:440.000đ</span>
+
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div style="clear: both"></div>
+
+    <div id="footer">
+
+        <div id="tren">
+            <div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">
+                <div class="info">
+                    <span><b>VỀ CHÚNG TÔI</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Địa Chỉ:  </a></li>
+                        <li><a href="#">Điện Thoại: 	</a></li>
+                        <li><a href="#">Fax: 343 52 7253</a></li>
+                        <li><a href="#">Email: support@gmail.com</a></li>
+                        <li><a href="#">Hotline: 19008090</a></li>
+
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Hướng Dẫn Mua Hàng</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Thông Tin Chính Sách</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="duoi">
+                <div id="copyright">
+                    <span>@ Bản quyền thuộc về Shop</span>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
+</body>
+
 </html>

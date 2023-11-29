@@ -1,19 +1,25 @@
 <html>
-	<head>
-		<title>Shop Quần Áo Thành Trung</title>
-		<link rel="stylesheet" type="text/css" href="main.css" />
-		<meta charset="UTF-8">
-	
-	<script src="jquery-3.6.0.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			var cart = sessionStorage.getItem("cart");
-			var order = "["+cart+"]";
-			var data = JSON.parse(order);
-			$(".amount").text("Giỏ hàng ("+data.length+")");
-			var content = "";
-			
-			content+= `<table cellpadding="5" cellspacing="0">
+
+<head>
+    <title>Shop Quần Áo</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta charset="UTF-8">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        function clearCart() {
+            sessionStorage.clear();
+            // Gọi lại hàm tonghoadon để cập nhật tổng tiền
+            tonghoadon();
+        }
+        $(document).ready(function() {
+            var cart = sessionStorage.getItem("cart");
+            var order = "[" + cart + "]";
+            var data = JSON.parse(order);
+            $(".amount").text("Giỏ hàng (" + data.length + ")");
+            var content = "";
+
+            content += `<table cellpadding="5" cellspacing="0">
 						<tr>
 							<th>STT</th>
 							<th>Ảnh sản phẩm</th>
@@ -23,10 +29,9 @@
 							<th>Thành tiền</th>
 							<th>Xóa</th>
 						</tr>`;
-			
-			for(var i=0;i<data.length;i++)
-			{
-				var cartItem = `
+
+            for (var i = 0; i < data.length; i++) {
+                var cartItem = `
 					<tr class="cotnay">
 						<td>${i+1}</td>
 						<!-- <td><a href="#"><img class="cart-item-img" src="picture/${data[i].photo}"/></a></td>   -->
@@ -42,221 +47,223 @@
 						<td><img class="Xoa" width="28px" src="delete.png" /></td>
 					</tr>
 				`;
-				
-				content += cartItem;
-			}
-			content += `</table>`;
-			
-			$("#left-content").html(content);
-			
-			
-			$(".plus").click(function(){
-				var amount = $(this).prev().attr("value");
-				var a = Number(amount)+1;
-				$(this).prev().attr("value",a);
-				
-				var str_price = $(this).parent().prev().text();		
-				var price = getMoney(str_price);
-				var total = a * Number(price);
-				
-				$(this).parent().next().text(total + " Đ");
-				
-				tonghoadon();
-			});
-			
-			$(".sub").click(function(){
-				var amount = $(this).next().attr("value");
-				if(Number(amount)>1)
-				{
-					var a = Number(amount)-1;
-					$(this).next().attr("value",a);	
-					
-					var str_price = $(this).parent().prev().text();		
-					var price = getMoney(str_price);
-					var total = a * Number(price);
-				
-					$(this).parent().next().text(total + " Đ");
-				}
-				tonghoadon();
-			});	
-			$(document).on("click",".Xoa",function(){
-					$(this).parent().parent().remove();
-			});
-		});
-	</script>
-	</head>
-	<body>
-		<div id="header">		
-			<div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
-				<img id="logo" src="Logo.png" alt="Logo" />
-				
-				<select id="cate-option">
+
+                content += cartItem;
+            }
+            content += `</table>`;
+
+            $("#left-content").html(content);
+
+
+            $(".plus").click(function() {
+                var amount = $(this).prev().attr("value");
+                var a = Number(amount) + 1;
+                $(this).prev().attr("value", a);
+
+                var str_price = $(this).parent().prev().text();
+                var price = getMoney(str_price);
+                var total = a * Number(price);
+
+                $(this).parent().next().text(total + " Đ");
+
+                tonghoadon();
+            });
+
+            $(".sub").click(function() {
+                var amount = $(this).next().attr("value");
+                if (Number(amount) > 1) {
+                    var a = Number(amount) - 1;
+                    $(this).next().attr("value", a);
+
+                    var str_price = $(this).parent().prev().text();
+                    var price = getMoney(str_price);
+                    var total = a * Number(price);
+
+                    $(this).parent().next().text(total + " Đ");
+                }
+                tonghoadon();
+            });
+            $(document).on("click", ".Xoa", function() {
+                $(this).parent().parent().remove();
+                clearCart();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
+            <img id="logo" src="Logo.png" alt="Logo" />
+
+            <select id="cate-option">
 					<option value="Thời Trang Nam">Thời Trang Nam</option>
 					<option value="Thời Trang Nữ">Thời Trang Nữ</option>		
 					<option value="Phụ Kiện Thời Trang">Phụ Kiện Thời Trang</option>							
 				</select>
-				
-				<input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
-				
-				<input id="btnsearch" type="button" value="Tìm" />
-				
-								
-				<div id="account">
-					<a href="#"><b>Tài khoản</b></a> <br />
-					<a href="login.html">Đăng nhập</a> & <a href="sinup.html">Đăng ký</a>
-				</div>
-				
-				<div id="cart">
-					<a href="cart.html" > <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a> 
-					<a href="cart.html">Giỏ hàng</a>				
-				</div>	
-				
-				<!-- Tạo menu ngang 2 cấp -->
-				<div id="nav">
-					<ul>
-						<li><a href="index.html">Trang chủ</a></li>
-						<li><a href="GioiThieu.html">Giới thiệu</a></li>
-						<li><a href="SanPham.html">Sản phẩm</a>
-							<ul>
-								<li><a href="aonam.html">Áo Nam</a></li>
-								<li><a href="aonu.html">Áo Nữ</a></li>
-								<li><a href="quannam.html">Quần Nam</a></li>
-								<li><a href="quannu.html">Quần Nữ</a></li>								
-							</ul>
-						</li>
-						<li><a href="TinTuc.html">Tin Tức</a></li>
-						<li><a href="KhuyenMai.html">Khuyến mại</a></li>
-						<li><a href="GiaSoc.html">Giá sốc</a></li>
-						<li><a href="LienHe.html">Liên hệ</a></li>
-					</ul>					
-				</div>
-				
-			</div>		
-		</div>
-		
-		<div style="clear: both" ></div>
-		
-		<div id="container" style="height:400px;">
-			<div id="content">
-				<div id="left-content">
-					
-					
-				</div>
-				<div id="right-content">
-					<div class="col- table2">
-						<div class="thanhtoan">
-							<div style="text-align: left;">
-								<label>Tổng</label>
-							</div>
-							<div style="text-align: right;margin-top: -15px;">
-								<label id="payTong">0</label>
-							</div>
-						</div>
-						<hr>
-						
-						<div>
-							<div style="float: left;">Tổng phụ</div><br>
-							<div style="float: right;margin-top: -20px;">50.000 Đ</div><br>
-						</div>
-						<hr>
-				  
-						<div class="thanhtoan">
-							<div style="text-align: left;">
-								<label>Tổng Tiền</label>
-							</div>
-							<div style="text-align: right;margin-top: -15px;">
-								<label id="spTong">0</label>
-							</div>
-						</div>
-					
-						<hr>
-						<div>
-							<div style="float: left;">Giao hàng</div>
-							<div style="float: right;">Giao hàng miễn phí<br>Miễn phí cho <b>VIỆT NAM.</b><br></div>
-						</div>
-						<br>
-						<br>
-					   
-						<hr>
-						<a href="ThanhToan.html"><button class="tt">TIẾN HÀNH THANH TOÁN</button></a>
-						
-						<hr>
-						<input class="ma" placeholder="Mã ưu đãi">
-						<hr>
-						<button class="apdung">Áp dụng</button>
-					</div>					
-				</div>
-			</div>
-		
-		</div>
-		
-		<script src="script.js"></script>
-			<script>
-				tonghoadon();
-			</script>
 
-		<div style="clear: both" ></div>
-		
-		<div id="footer">				
-				
-			<div  id="tren">
-				<div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">				
-					<div class="info">
-						<span><b>VỀ CHÚNG TÔI</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Địa Chỉ: 12 Nguyễn Chế Ngĩa-Gia Lộc </a></li>
-							<li><a href="#">Điện Thoại: 0936846270	</a></li>
-							<li><a href="#">Fax: 343 52 7253</a></li>
-							<li><a href="#">Email: support@gmail.com</a></li>
-							<li><a href="#">Hotline: 19008090</a></li>
-							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Hướng Dẫn Mua Hàng</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Thông Tin Chính Sách</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-				
-			</div>	
-			<div id="duoi">
-				<div id="copyright">
-					<span>@ Bản quyền thuộc về Shop Thành Trung</span>				
-				</div>
-			</div>		
-		</div>
-		
-		
-	</body>
+            <input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
+
+            <input id="btnsearch" type="button" value="Tìm" />
+
+
+            <div id="account">
+                <a href="#"><b>Tài khoản</b></a> <br />
+                <a href="login.html">Đăng nhập</a> & <a href="sinup.html">Đăng ký</a>
+            </div>
+
+            <div id="cart">
+                <a href="cart.html"> <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a>
+                <a href="cart.html">Giỏ hàng</a>
+            </div>
+
+            <!-- Tạo menu ngang 2 cấp -->
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                    <li><a href="SanPham.html">Sản phẩm</a>
+                        <ul>
+                            <li><a href="aonam.html">Áo Nam</a></li>
+                            <li><a href="aonu.html">Áo Nữ</a></li>
+                            <li><a href="quannam.html">Quần Nam</a></li>
+                            <li><a href="quannu.html">Quần Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="TinTuc.html">Tin Tức</a></li>
+                    <li><a href="KhuyenMai.html">Khuyến mại</a></li>
+                    <li><a href="GiaSoc.html">Giá sốc</a></li>
+                    <li><a href="LienHe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div id="container" style="height:400px;">
+        <div id="content">
+            <div id="left-content">
+
+
+            </div>
+            <div id="right-content">
+                <div class="col- table2">
+                    <div class="thanhtoan">
+                        <div style="text-align: left;">
+                            <label>Tổng</label>
+                        </div>
+                        <div style="text-align: right;margin-top: -15px;">
+                            <label id="payTong">0</label>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div>
+                        <div style="float: left;">Tổng phụ</div><br>
+                        <div style="float: right;margin-top: -20px;">50.000 Đ</div><br>
+                    </div>
+                    <hr>
+
+                    <div class="thanhtoan">
+                        <div style="text-align: left;">
+                            <label>Tổng Tiền</label>
+                        </div>
+                        <div style="text-align: right;margin-top: -15px;">
+                            <label id="spTong">0</label>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div>
+                        <div style="float: left;">Giao hàng</div>
+                        <div style="float: right;">Giao hàng miễn phí<br>Miễn phí cho <b>VIỆT NAM.</b><br></div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <hr>
+                    <a href="ThanhToan.html"><button class="tt">TIẾN HÀNH THANH TOÁN</button></a>
+
+                    <hr>
+                    <input class="ma" placeholder="Mã ưu đãi">
+                    <hr>
+                    <button class="apdung">Áp dụng</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        tonghoadon();
+    </script>
+
+    <div style="clear: both"></div>
+
+    <div id="footer">
+
+        <div id="tren">
+            <div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">
+                <div class="info">
+                    <span><b>VỀ CHÚNG TÔI</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Địa Chỉ: 12 Nguyễn Chế Ngĩa-Gia Lộc </a></li>
+                        <li><a href="#">Điện Thoại: 0936846270	</a></li>
+                        <li><a href="#">Fax: 343 52 7253</a></li>
+                        <li><a href="#">Email: support@gmail.com</a></li>
+                        <li><a href="#">Hotline: 19008090</a></li>
+
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Hướng Dẫn Mua Hàng</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Thông Tin Chính Sách</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="duoi">
+                <div id="copyright">
+                    <span>@ Bản quyền thuộc về Shop</span>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
 </html>

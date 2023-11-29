@@ -1,128 +1,880 @@
 <html>
-	<head>
-		<title>Shop Quần Áo</title>
-		<link rel="stylesheet" type="text/css" href="main.css" />
-	</head>
-	<body>
-		<div id="header">		
-			<div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
-				<img id="logo" src="Logo.png" alt="Logo" />
-				
-				<select id="cate-option">
+
+<head>
+    <title>Shop Quần Áo</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" href="tintuc.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="width: 1140px; height: 180px; background-color: #FFF; margin: 0px auto; position: relative">
+            <img id="logo" src="Logo.png" alt="Logo" />
+
+            <select id="cate-option">
 					<option value="Thời Trang Nam">Thời Trang Nam</option>
 					<option value="Thời Trang Nữ">Thời Trang Nữ</option>		
 					<option value="Phụ Kiện Thời Trang">Phụ Kiện Thời Trang</option>							
 				</select>
-				
-				<input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
-				
-				<input id="btnsearch" type="button" value="Tìm" />
-				
-								
-				<div id="account">
-					<a href="#"><b>Tài khoản</b></a> <br />
-					<a href="#">Đăng nhập</a> & <a href="#">Đăng ký</a>
-				</div>
-				
-				<div id="cart">
-					<a href="cart.html" > <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a> 
-					<a href="cart.html">Giỏ hàng</a>				
-				</div>	
-				
-				<!-- Tạo menu ngang 2 cấp -->
-				<div id="nav">
-					<ul>
-						<li><a href="index.html">Trang chủ</a></li>
-						<li><a href="GioiThieu.html">Giới thiệu</a></li>
-						<li><a href="SanPham.html">Sản phẩm</a>
-							<ul>
-								<li><a href="aonam.html">Áo Nam</a></li>
-								<li><a href="aonu.html">Áo Nữ</a></li>
-								<li><a href="quannam.html">Quần Nam</a></li>
-								<li><a href="quannu.html">Quần Nữ</a></li>								
-							</ul>
-						</li>
-						<li><a href="TinTuc.html">Tin Tức</a></li>
-						<li><a href="KhuyenMai.html">Khuyến mại</a></li>
-						<li><a href="GiaSoc.html">Giá sốc</a></li>
-						<li><a href="LienHe.html">Liên hệ</a></li>
-					</ul>					
-				</div>
-				
-			</div>		
-		</div>
-		
-		<div style="clear: both" ></div>
-		
-		<div id="container" style="height:400px;">
-		
-		
-		
-		</div>
-			
-		
-		<div style="clear: both" ></div>
-		
-		<div id="footer">				
-				
-			<div  id="tren">
-				<div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">				
-					<div class="info">
-						<span><b>VỀ CHÚNG TÔI</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Địa Chỉ: 12 Nguyễn Chế Ngĩa-Gia Lộc </a></li>
-							<li><a href="#">Điện Thoại: 	</a></li>
-							<li><a href="#">Fax: 343 52 7253</a></li>
-							<li><a href="#">Email: support@gmail.com</a></li>
-							<li><a href="#">Hotline: 19008090</a></li>
-							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>							
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Hướng Dẫn Mua Hàng</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-					<div class="info">
-						<span><b>Thông Tin Chính Sách</b></span> <br />
-						<ul style="list-style: none" >
-							<li><a href="#">Trang Chủ</a></li>
-							<li><a href="#">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="#">Tin Tức</a></li>
-							<li><a href="#">Khuyễn Mãi</a></li>
-							<li><a href="#">Liên Hệ</a></li>
-							<li><a href="#">Chính Sách</a></li>	
-						</ul>						
-					</div>
-				
-			</div>	
-			<div id="duoi">
-				<div id="copyright">
-					<span>@ Bản quyền thuộc về Shop</span>				
-				</div>
-			</div>		
-		</div>
-		
-		
-	</body>
+
+            <input id="txtsearch" type="text" placeholder="Nhập từ khóa tìm kiếm" />
+
+            <input id="btnsearch" type="button" value="Tìm" />
+
+
+            <div id="account">
+                <a href="#"><b>Tài khoản</b></a> <br />
+                <a href="#">Đăng nhập</a> & <a href="#">Đăng ký</a>
+            </div>
+
+            <div id="cart">
+                <a href="cart.html"> <img id="img-cart" src="picture/cart.jpg" alt="Giỏ hàng" /> </a>
+                <a href="cart.html">Giỏ hàng</a>
+            </div>
+
+            <!-- Tạo menu ngang 2 cấp -->
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                    <li><a href="SanPham.html">Sản phẩm</a>
+                        <ul>
+                            <li><a href="aonam.html">Áo Nam</a></li>
+                            <li><a href="aonu.html">Áo Nữ</a></li>
+                            <li><a href="quannam.html">Quần Nam</a></li>
+                            <li><a href="quannu.html">Quần Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="TinTuc.html">Tin Tức</a></li>
+                    <li><a href="KhuyenMai.html">Khuyến mại</a></li>
+                    <li><a href="GiaSoc.html">Giá sốc</a></li>
+                    <li><a href="LienHe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="clear: both"></div>
+
+    <main>
+        <div id="scrollToTopBtn" onclick="scrollToTop()">
+            <img src="image/top.png">
+        </div>
+
+        <div class="story">
+            <div class="story-title">
+                <div class="story-title-tren" style="margin: 20px;">
+                    <span class="story-tren">POST Fact</span>
+                    <a href="#" class="story-follow" style="float: right;">Xem tất cả</a>
+                </div>
+                <div class="story-title-duoi">
+                    <div class="story-item">
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/4.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/4.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                            <b><p>Lee Chau</p></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-trai">
+                <img src="image/post/1.png" alt="User Icon">
+                <h2>Trên tay MacBook Pro M3 màu đen RAM 18GB</h2>
+                <div class="post-trai-img">
+                    <div>
+                        <img src="image/post/3.jpg" alt="User Icon">
+                        <h2>Trên tay MacBook Pro M3 màu đen RAM 18GB</h2>
+                    </div>
+                    <div>
+                        <img src="image/post/5.jpg" alt="User Icon">
+                        <h2>Trên tay MacBook Pro M3 màu đen RAM 18GB</h2>
+                    </div>
+                    <div>
+                        <img src="image/post/6.jpg" alt="User Icon">
+                        <h2>Trên tay MacBook Pro M3 màu đen RAM 18GB</h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="post-giua">
+                <img src="image/post/2.png" alt="User Icon">
+                <p>BMW XM ra mắt Việt Nam: SUV đỉnh cao nhất của BMW hiện tại, giá 10,999 tỷ Đồng<br> xe.tinhte.vn
+                    <br> BMW XM 2023 (G09) là mẫu xe SUV hiệu năng cao với hệ dẫn động plug-in-hybrid <br> rất đặc biệt của BMW, không chỉ nằm ở định vị phân khúc mà còn nằm ở thiết kế <br> và hệ truyền động của nó. Bên cạnh động cơ V8 tăng áp</p>
+            </div>
+            <div class="post-phai">
+                <div style="display: flex;
+                justify-content: space-between;
+                align-items: center;">
+                    <h3>Xem Nhanh</h3>
+                    <a href="#">Xem tất cả</a>
+                </div>
+                <div>
+                    <div class="post-phai-detail">
+                        <a href="#">Iridium: thoả thuận giữa chúng tôi và Qualcomm về Snapdragon</a>
+                        <img src="image/post/2.jpg" alt="User Icon">
+                    </div>
+                    <div class="post-phai-detail">
+                        <a href="#">Trên tay nhanh Nikkor Z 135mm f/1.8 S Plena Material </a>
+                        <img src="image/post/1.jpg" alt="User Icon">
+                    </div>
+                    <div class="post-phai-detail">
+                        <a href="#">Google Chrome 119 cập nhật với giao diện Material You mới, mời anh</a>
+                        <img src="image/post/3.jpg" alt="User Icon">
+                    </div>
+                    <div class="post-phai-detail">
+                        <a href="#">Trên tay Blackmagic Cinema Camera 6K Full-frame: Ngàm L, CFExpres</a>
+                        <img src="image/post/4.jpg" alt="User Icon">
+                    </div>
+                    <div class="post-phai-detail">
+                        <a href="#"> Trên tay Blackmagic Cinema Camera 6K Full-frame: Ngàm L, CFExpres</a>
+                        <img src="image/post/5.jpg" alt="User Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 0px auto;max-width: 1140px;">
+            <img src="image/post/3.png" alt="ads Icon">
+        </div>
+        <div class="topblog">
+            <div>
+                <h3>Bài nổi bật</h3>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#1</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#2</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#3</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#4</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#5</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#6</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/3.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/3.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+
+        <div class="story" style="background-color: #01152F;max-width: 1155px;margin: 0px auto;border: 1px solid #ddd;padding: 10px;border-radius: 10px;">
+            <div style="border-bottom: 1px solid #fff;">
+                <div class="post-trai-img" style="margin-right: 570px;">
+                    <div class="story-title">
+                        <img src="image/create.png">
+                    </div>
+                    <div class="item-container">
+                        <img src="image/post/6.jpg" alt="User Icon">
+                        <div class="text-content">
+                            <h2>dphtrieu</h2>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <img src="image/post/1.jpg" alt="User Icon">
+                        <div class="text-content">
+                            <h2>dphtrieu</h2>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <img src="image/post/2.jpg" alt="User Icon">
+                        <div class="text-content">
+                            <h2>dphtrieu</h2>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <img src="image/post/3.jpg" alt="User Icon">
+                        <div class="text-content">
+                            <h2>dphtrieu</h2>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <img src="image/post/4.jpg" alt="User Icon">
+                        <div class="text-content">
+                            <h2>dphtrieu</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="story-title">
+                <div class="story-title-tren" style="margin: 20px;color: #FFF;">
+                    <span class="story-tren">Bài Review Mới Nhất</span>
+                    <a href="#" class="story-follow" style="float: right;color: #FFF;">Viết bài review</a>
+                </div>
+                <div class="story-title-duoi" style="color: #FFF;">
+                    <div class="story-item">
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm</h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm</h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/4.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/4.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                        <div class="story-item-detail">
+                            <img src="image/story/5.jpg" alt="ảnh" style="width: 180px ;height: 110px;">
+                            <h3 style="width: 80px; height: 70px;">Review Micro thu âm </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button>Xem Tất Cả</button>
+                </div>
+            </div>
+        </div>
+        <div class="story">
+            <!-- <div style="max-width: 1140px;margin: 0px auto;">
+                <iframe width="800" height="470" src="https://www.youtube.com/embed/g1mxWD3hAZ8" frameborder="0" allowfullscreen></iframe>
+            </div> -->
+            <div>
+                <div style="max-width: 1140px;margin: 0px auto;">
+                    <iframe width="800" height="470" src="https://www.youtube.com/embed/g1mxWD3hAZ8" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="story-title" style="    max-width: 800px;
+            margin-left: 375px;background-color:#01152F ;">
+
+                <div class="custom-story-title-duoi">
+                    <div class="custom-story-item">
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/3.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/1.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                        <div class="custom-story-item-detail">
+                            <img src="image/story/2.jpg" alt="ảnh">
+                        </div>
+                        <div>
+                            <p>Đây là camera tốt nhất trong thế giới điện thoại gập! | OPPO Find N3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="video-comput">
+            <div class="video-comput-right">
+                <h3>SON TUNG M-TP | MAKING MY WAY | OFFICIAL VISUALIZER</h3>
+                <video width="640" height="360" controls>
+                    <source src="audio/ad.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-comput-left">
+                <h2 style="background-color: #213143; width: 200px;color: #FFF;">#TAG DANG HOT</h2>
+                <div class="custom-container">
+                    <div class="custom-item">
+                        <img class="custom-img" src="image/ads/1.png" alt="Tinhte.vn Logo">
+                        <p>#MACOS</p>
+                    </div>
+                    <div class="custom-item">
+                        <img class="custom-img" src="image/ads/2.png" alt="Tinhte.vn Logo">
+                        <p>#WINDOWS</p>
+                    </div>
+                </div>
+                <div class="video-comput-left">
+                    <h4>Cộng Đồng</h4>
+                    <div class="custom-container">
+                        <div class="custom-item">
+                            <img class="custom-img" style="width: 40%;" src="image/story/1.jpg" alt="Tinhte.vn Logo">
+                            <p>STMN 23</p>
+                        </div>
+                        <div class="custom-item">
+                            <img class="custom-img" style="width: 40%;" src="image/story/1.jpg" alt="Tinhte.vn Logo">
+                            <p>Máy đọc sách</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topblog">
+            <div>
+                <h3>Bài nổi bật</h3>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#1</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#2</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#3</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#4</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#5</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#6</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/3.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/3.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="topblog">
+            <div>
+                <h3>Bài nổi bật</h3>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#1</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#2</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#3</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#4</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topblog-a">
+                    <div class="topblog-right">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#5</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                    <div class="topblog-left">
+                        <div style="font-size: 35px;padding: 12px; color: #7e7e7e;">
+                            <b><a>#6</a></b>
+                        </div>
+                        <div>
+                            <a style="font-size: 20px;">Trên tay MacBook Pro M3 màu đen RAM 18GB</a>
+                            <p>cuhiep</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/3.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/3.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/3.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/3.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/1.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/1.jpg" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/2.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/2.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+        <div class="blogtag">
+            <div class="content-container-right">
+                <img src="image/post/3.jpg" alt=" Icon">
+            </div>
+            <div class="text-content-left">
+                <h4>Mình mới đổi bàn nâng hạ bốn chân, tự đóng mặt gỗ</h4>
+                <p>Vì số đồ dùng để trên bàn tăng lên nên mình đã phải đóng một cái bàn làm việc mới to rộng hơn, lần này mình vẫn chọn bàn nâng hạ và có bốn chân ổn định hơn cái trước. Mình cũng chỉ mua khung bàn nâng hạ còn mặt gỗ mình tự thiết kế theo
+                    ý về màu sắc…</p>
+                <a href="#"><img src="image/people/3.png" alt="User Icon"></a>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div style="clear: both"></div>
+
+    <div id="footer">
+
+        <div id="tren">
+            <div style="width: 1140px; height: 340px; margin: 0px auto; color: #FFF; display: flex; flex: flex-wrap: wrap">
+                <div class="info">
+                    <span><b>VỀ CHÚNG TÔI</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Địa Chỉ: 12 Nguyễn Chế Ngĩa-Gia Lộc </a></li>
+                        <li><a href="#">Điện Thoại: 	</a></li>
+                        <li><a href="#">Fax: 343 52 7253</a></li>
+                        <li><a href="#">Email: support@gmail.com</a></li>
+                        <li><a href="#">Hotline: 19008090</a></li>
+
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>HỖ TRỢ KHÁCH HÀNG</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Hướng Dẫn Mua Hàng</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <span><b>Thông Tin Chính Sách</b></span> <br />
+                    <ul style="list-style: none">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Khuyễn Mãi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Chính Sách</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="duoi">
+                <div id="copyright">
+                    <span>@ Bản quyền thuộc về Shop</span>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
 </html>
