@@ -1,16 +1,16 @@
-var i =1;
-var N=4;
-function next(){
-if(i<N) i +=1; else i=1;
-document.getElementById("slider").setAttribute("src",i+".png");
-}
-function back(){
-if(i>N) i -=1; else i=N;
-document.getElementById("slider").setAttribute("src",i+".png");
-}  
-function autoPlay(){
-	setInterval(next,1800)
-}
+// var i =1;
+// var N=4;
+// function next(){
+// if(i<N) i +=1; else i=1;
+// document.getElementById("slider").setAttribute("src",i+".png");
+// }
+// function back(){
+// if(i>N) i -=1; else i=N;
+// document.getElementById("slider").setAttribute("src",i+".png");
+// }  
+// function autoPlay(){
+// 	setInterval(next,1800)
+// }
 
 //tổng tiền
 function tonghoadon() {

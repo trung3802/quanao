@@ -54,11 +54,12 @@
 		
 		<div style="clear: both" ></div>
 		
-		<div id="container"  style="background-color:#FFFFCC"  >
-			<script language="javascript" src="java2.js"></script>
-			<form action="" method="POST" onsubmit="return validate()">
-				<div class="register">
-					<h1>Vui lòng điền thông tin để đăng nhập !</h1>
+		<div id="container"  style="background-color:#fff"  >
+			<!-- <script language="javascript" src="java2.js"></script> -->
+			<form style="padding: 25px;" action="" method="POST" onsubmit="return validate()">
+				<fieldset class="register">
+					<legend>Vui lòng điền thông tin để đăng nhập!</legend>
+					<hr>
 							<hr>
 								<label for="username"><b>Tên đăng nhập</b></label>
 									<input type="text" placeholder="Họ và tên" name="username" id="username"></br>		
@@ -67,13 +68,76 @@
 							<hr>				
 					<button type="submit" class="submit">Đăng Nhập</button>
 					
-				</div>
+				</fieldset>
 				<div class="register login">
 				<b><a href="admin.html">Đăng Nhập Với Quyền Admin</a></b>
 				</div>
 			</form>									
 		</div>
-			
+		
+		<script>
+			function validate() {
+					var username = document.getElementById("username").value;
+					var password = document.getElementById("password").value;
+
+					// Kiểm tra thông tin đăng nhập
+					if (!username || !password) {
+						alert("Vui lòng điền đầy đủ thông tin!");
+						return false;
+					}
+
+					// Kiểm tra thông tin đăng nhập với quyền admin
+					if (username === "admin" && password === "adminpassword") {
+						alert("Đăng nhập với quyền admin thành công!");
+						// Lưu thông tin đăng nhập vào session storage
+						var adminObject = {
+							username: username,
+							role: "admin"
+						};
+						sessionStorage.setItem('loggedInUser', JSON.stringify(adminObject));
+					} else {
+						// Kiểm tra thông tin đăng nhập với thông tin đã đăng ký
+						var storedUser = sessionStorage.getItem('registeredUser');
+						if (storedUser) {
+							var userObject = JSON.parse(storedUser);
+
+							if (username === userObject.username && password === userObject.password) {
+								alert("Đăng nhập thành công!");
+								// Lưu thông tin đăng nhập vào session storage
+								// sessionStorage.setItem('loggedInUser', JSON.stringify(userObject));
+							} else {
+								alert("Sai tên đăng nhập hoặc mật khẩu!");
+								return false;
+							}
+						} else {
+							alert("Tài khoản không tồn tại!");
+							return false;
+						}
+					}
+
+					// Reset form sau khi đăng nhập
+					resetForm();
+
+					return true;
+				}
+
+				function resetForm() {
+					document.getElementById("username").value = "";
+					document.getElementById("password").value = "";
+				}
+
+				// Hàm để kiểm tra đăng nhập
+				function isAdminLoggedIn() {
+					var loggedInUser = sessionStorage.getItem('loggedInUser');
+
+					if (loggedInUser) {
+						var userObject = JSON.parse(loggedInUser);
+						return userObject.role === "admin";
+					}
+
+					return false;
+				}
+		</script>	
 		
 		<div style="clear: both" ></div>
 		
